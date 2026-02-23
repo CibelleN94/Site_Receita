@@ -1,12 +1,16 @@
 @import url(variables.css);
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 
 :root {
     --main-color: #BD4700;
     --white: #EEE8AA;
-    --cinza:#B2AC88;
+    --cinza: #B2AC88;
+    --marrom: #8B4500;
     --border: 0.1rem solid;
-    
+
+
 }
 
 * {
@@ -20,40 +24,85 @@
 }
 
 body {
-    background-color: var(--white)
+    background-color: var(--white);
+    width: 100%;
 }
 
 header {
     display: flex;
     flex-direction: row;
-    justify-content:space-around;
-    background-color: var(--white);
-    height: 10vh;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    height: 12vh;
     width: 100vw;
     padding: 20px;
 }
-
-a#menu {
-    color: var(--main-color)
-}
-
-div.topper {
+.navbar {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--main-color);
-    padding: 5x;
-    height: 30vh;
+    gap: 40px;
+    
 }
 
-h1 {
-    font-family: Sergio Trendy;
-    font-size: 60px;
+a#menu { 
     color: var(--white);
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    font-size: 1.1em;    
 }
 
-img#imglogo {
-    width: 250px;
-    height: 250px;
+a#menu::after {
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: var(--white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+a#menu:hover::after {
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--marrom);
+    background-color: var(--white);
+    width: 400px;
+    border-radius: 15px;
+    padding:15px 10px;
+    color: var(--marrom);
+}
+
+#searchInput {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+
+}
+svg {
+    display: block;
+}
+#topper {
+    padding: 10px;
+    background-color: var(--main-color);
+}
+h1 {
+    color: var(--white);
+    font-family:"Playfair Display", serif;
+    font-size: 3em;
+    text-shadow: rgba(0, 0, 0, 0.466) 2px solid;
+    text-align: justify;
+}
+
+h2 {
+    color: var(--marrom);
+    text-align: center;
+    padding-bottom: 30px;
+    font-family:"Playfair Display", serif;
+    font-size: 2em;
 }
