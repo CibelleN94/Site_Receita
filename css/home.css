@@ -4,10 +4,10 @@
 
 
 :root {
-    --main-color: #BD4700;
     --white: #EEE8AA;
     --cinza: #B2AC88;
     --marrom: #8B4500;
+    --vermelho-terroso: #78252d;
     --border: 0.1rem solid;
 }
 
@@ -15,16 +15,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Public Sans;
+    font-family: Public Sans, sans-serif;
+    ;
     text-decoration: none;
     outline: none;
     transition: 0.2s linear;
-    /*outline: 1px solid red;*/
+    /* outline: 1px solid red;*/
 }
 
 body {
     background-color: var(--white);
     width: 100%;
+    min-height: 100vh;
+    
 }
 
 header {
@@ -35,7 +38,7 @@ header {
     background-color: var(--marrom);
     height: 10vh;
     width: 100%;
-    padding: 20px;
+    padding-top: 20px;
 
 }
 
@@ -43,7 +46,7 @@ header {
     display: flex;
     position: relative;
     gap: 40px;
-   left: 80px;
+    margin-left: 100px;
 
 }
 
@@ -69,6 +72,8 @@ a#menu:hover::after {
     width: 100%;
 }
 
+
+
 .search {
     display: flex;
     align-items: center;
@@ -77,9 +82,11 @@ a#menu:hover::after {
     max-width: 400px;
     width: 100%;
     border-radius: 15px;
-    padding: 15px 10px;
+    padding: 5px 5px;
     color: var(--marrom);
     margin-right: 50px;
+    position: relative;
+    margin-bottom: 12px;
 }
 
 #searchInput {
@@ -93,49 +100,41 @@ a#menu:hover::after {
 
 svg {
     display: block;
-        
 }
-h1 {
-    color: var(--white);
-    font-family: "Playfair Display", serif;
-    font-size: 3em;
-    text-shadow: rgba(0, 0, 0, 0.466) 2px solid;
-    text-align: justify;
-    margin-left: 150px;
-    bottom: 250px;
 
-
-}
 
 h2#tittletop {
     color: var(--marrom);
-    text-align: center;
-    padding-bottom: 30px;
+    margin-bottom:30px;
+    margin-top: -130px;
+    text-align: center;    
     font-family: "Playfair Display", serif;
     font-size: 2em;
-    text-shadow: solid 5px black;
+
 }
 
 .container {
- display: flex;
- justify-content: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
 
 
 }
 
 .card {
     background-color: #8B4500;
-    width: 150px;
-    height: 250px;
-    margin: 5px;
-    border-radius:15px;
+    width: 180px;
+    margin: 1px;
+    border-radius: 15px;
 }
 
 .card-image {
-  height: 150px;
-  margin-bottom: 15px;
-  background-size: cover;
-  border-radius: 15px 0 15px 0;
+    height: 150px;
+    margin-bottom: 2px;
+    background-size: cover;
+    border-radius: 15px;
+
 
 }
 
@@ -159,7 +158,36 @@ h2#tittletop {
     background-image: url('../imagens/veganas.jpg');
 }
 
-h2#card {
+.card h2 {
     text-align: center;
     color: var(--white);
+    font-family: "Playfair Display", serif;
+    ;
+
+}
+
+.card p {
+    color: var(--white);
+    text-align: left;
+    font-size: 0.8em;
+    font-family: "Source Code Pro", monospace;
+    padding: 10px;
+
+}
+
+.card a {
+    background-color: #B2AC88;
+    color: var(--marrom);
+    padding: 10px 10px;
+    display: block;
+    text-align: center;
+    margin: 20px 40px;
+    text-decoration: none;
+}
+
+.card:hover {
+    background-color: var(--vermelho-terroso);
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s ease;
 }
