@@ -9,8 +9,6 @@
     --cinza: #B2AC88;
     --marrom: #8B4500;
     --border: 0.1rem solid;
-
-
 }
 
 * {
@@ -20,7 +18,8 @@
     font-family: Public Sans;
     text-decoration: none;
     outline: none;
-    transition: 0.2 linear;
+    transition: 0.2s linear;
+    /*outline: 1px solid red;*/
 }
 
 body {
@@ -31,23 +30,28 @@ body {
 header {
     display: flex;
     flex-direction: row;
+    position: fixed;
     justify-content: space-between;
-    background-color: var(--main-color);
-    height: 12vh;
-    width: 100vw;
+    background-color: var(--marrom);
+    height: 10vh;
+    width: 100%;
     padding: 20px;
-}
-.navbar {
-    display: flex;
-    gap: 40px;
-    
+
 }
 
-a#menu { 
+.navbar {
+    display: flex;
+    position: relative;
+    gap: 40px;
+   left: 80px;
+
+}
+
+a#menu {
     color: var(--white);
     font-family: "Source Code Pro", monospace;
     position: relative;
-    font-size: 1.1em;    
+    font-size: 1.1em;
 }
 
 a#menu::after {
@@ -70,10 +74,12 @@ a#menu:hover::after {
     align-items: center;
     border: 1px solid var(--marrom);
     background-color: var(--white);
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     border-radius: 15px;
-    padding:15px 10px;
+    padding: 15px 10px;
     color: var(--marrom);
+    margin-right: 50px;
 }
 
 #searchInput {
@@ -84,25 +90,76 @@ a#menu:hover::after {
     outline: none;
 
 }
+
 svg {
     display: block;
-}
-#topper {
-    padding: 10px;
-    background-color: var(--main-color);
+        
 }
 h1 {
     color: var(--white);
-    font-family:"Playfair Display", serif;
+    font-family: "Playfair Display", serif;
     font-size: 3em;
     text-shadow: rgba(0, 0, 0, 0.466) 2px solid;
     text-align: justify;
+    margin-left: 150px;
+    bottom: 250px;
+
+
 }
 
-h2 {
+h2#tittletop {
     color: var(--marrom);
     text-align: center;
     padding-bottom: 30px;
-    font-family:"Playfair Display", serif;
+    font-family: "Playfair Display", serif;
     font-size: 2em;
+    text-shadow: solid 5px black;
+}
+
+.container {
+ display: flex;
+ justify-content: center;
+
+
+}
+
+.card {
+    background-color: #8B4500;
+    width: 150px;
+    height: 250px;
+    margin: 5px;
+    border-radius:15px;
+}
+
+.card-image {
+  height: 150px;
+  margin-bottom: 15px;
+  background-size: cover;
+  border-radius: 15px 0 15px 0;
+
+}
+
+.card-1 {
+    background-image: url('../imagens/dodia.jpg');
+}
+
+.card-2 {
+    background-image: url('../imagens/doces.jpg');
+}
+
+.card-3 {
+    background-image: url('../imagens/salgadas.jpg');
+}
+
+.card-4 {
+    background-image: url('../imagens/bebidas.jpg');
+}
+
+.card-5 {
+    background-image: url('../imagens/veganas.jpg');
+}
+
+h2#card {
+    text-align: center;
+    color: var(--white);
 }
